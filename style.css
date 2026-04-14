@@ -702,6 +702,9 @@ a { color: inherit; text-decoration: none; }
     padding: 10px 0;
     border-bottom: 1px solid var(--gray-3);
   }
+  .nav__links.open a {
+    color: var(--dark);
+  }
   .nav__links a:last-child { border-bottom: none; }
   .nav__links .btn { margin-top: 8px; width: 100%; }
   .nav__burger { display: flex; }
