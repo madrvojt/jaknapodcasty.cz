@@ -95,6 +95,7 @@ a { color: inherit; text-decoration: none; }
 .nav__links a:hover { color: var(--rose); }
 .nav.scrolled .nav__links a { color: var(--dark); }
 .nav.scrolled .nav__links a:hover { color: var(--rose); }
+.nav.scrolled .nav__links .btn--primary { color: var(--white); }
 .nav__burger {
   display: none;
   flex-direction: column;
@@ -289,9 +290,9 @@ a { color: inherit; text-decoration: none; }
 /* --- O NÁS --- */
 .onas__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 420px 1fr;
   gap: 72px;
-  align-items: center;
+  align-items: flex-start;
 }
 .onas__image {
   display: flex;
@@ -304,7 +305,7 @@ a { color: inherit; text-decoration: none; }
   height: 420px;
   border-radius: 50%;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--rose-light) 0%, var(--teal-light) 100%);
+  background: var(--white);
   box-shadow: 0 0 0 6px var(--rose-light), var(--shadow-lg);
   flex-shrink: 0;
 }
@@ -312,7 +313,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: 30% 50%;
   display: block;
 }
 .onas__stats {
@@ -511,9 +512,11 @@ a { color: inherit; text-decoration: none; }
 .pricing__note a:hover { text-decoration: underline; }
 
 /* --- KONZULTACE --- */
+#konzultace { padding-bottom: 0; }
+
 .konzultace__hero {
   display: grid;
-  grid-template-columns: 260px 1fr 260px;
+  grid-template-columns: 300px 1fr 300px;
   gap: 40px;
   align-items: end;
 }
@@ -522,8 +525,8 @@ a { color: inherit; text-decoration: none; }
   display: block;
   mix-blend-mode: multiply;
 }
-.konzultace__person--left  { align-self: end; }
-.konzultace__person--right { align-self: end; }
+.konzultace__person--left  { align-self: end; transform: scale(1.4); transform-origin: bottom left; }
+.konzultace__person--right { align-self: end; transform: scale(1.4); transform-origin: bottom right; }
 .konzultace__center {
   text-align: center;
   padding-bottom: 24px;
@@ -715,28 +718,17 @@ a { color: inherit; text-decoration: none; }
   .footer__top            { grid-template-columns: 1fr; gap: 40px; }
   .footer__divider-v      { display: none; }
 
-  /* Mobile footer – light theme */
-  .footer                 { background: var(--gray-4); }
   .footer__top            { text-align: center; }
-  .footer__heading        { color: var(--dark); font-size: 2rem; }
-  .footer__col p          { color: var(--gray-1); }
-  .footer__embed-wrap     { background: transparent; padding: 0; }
   .footer .pew            { display: block; }
   .footer .pe             { width: 100% !important; }
   .footer .pe .info       { text-align: center; }
-  .footer .pe .info a     { color: var(--rose) !important; }
   .footer .pe input[type=email] { border-radius: 50px !important; width: 100% !important; }
   .footer .pe button      {
-    background: transparent !important;
-    background-image: none !important;
-    border: 2px solid var(--dark) !important;
-    color: var(--dark) !important;
     border-radius: 50px !important;
     width: 100% !important;
     margin-top: 10px !important;
   }
-  .footer__contact-btn    { color: var(--dark); border-color: rgba(63,58,107,.4); width: 100%; }
-  .footer__contact-btn:hover { background: rgba(63,58,107,.08); border-color: var(--dark); color: var(--dark); }
+  .footer__contact-btn    { width: 100%; }
   .footer__mid            { border-color: rgba(63,58,107,.1); background: transparent; }
   .footer__socials a      {
     background: var(--rose);
